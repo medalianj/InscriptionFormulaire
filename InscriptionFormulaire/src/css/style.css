@@ -1,0 +1,129 @@
+@import "colors.css";
+
+body {
+  background: transparent
+    linear-gradient(
+      90deg,
+      var(--upsdell-red),
+      var(--old-mauve),
+      var(--indigo-dye)
+    );
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 1.5rem;
+  padding-top: 1.5rem;
+}
+
+.container {
+  border: 0.12rem solid var(--english-violet);
+  border-radius: 1rem;
+  padding: 3%;
+  box-shadow: 0.3rem 0.5rem var(--space-cadet);
+}
+
+h1 {
+  text-align: center;
+}
+
+.body-site {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gender-options {
+  display: flex;
+  margin-right: 10%;
+}
+
+.field-data {
+  color: rgb(22, 18, 18);
+  margin: 1.5rem;
+  display: flex;
+}
+
+.form-fields > button {
+  margin-left: 37%;
+  background-color: var(--upsdell-red);
+  border: 0.3rem solid var(--red-violet-color-wheel);
+  border-radius: 0.3rem;
+  font-size: x-large;
+  font-weight: bold;
+  width: 10rem;
+  height: 3rem;
+}
+
+.form-fields > button:hover {
+  color: white;
+  cursor: pointer;
+  transition: 1.5s;
+  background-color: var(--cadmium-red);
+  box-shadow: 0.3rem 0.3rem var(--red-violet-color-wheel);
+  border: 0.3rem solid var(--fire-engine-red);
+}
+
+.field-data > label {
+  flex: auto;
+  padding-right: 1rem;
+}
+
+.field-data > input {
+  width: 20rem;
+}
+
+.field-data > select {
+  width: 28.8rem;
+}
+
+.male,
+.female {
+  width: 9rem;
+  color: black;
+}
+
+#agree_with {
+  display: block;
+  text-align: center;
+  color: black;
+}
+
+#agree_with > input {
+  width: auto;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+select {
+  border-radius: 0.5rem;
+  font-size: 1.3rem;
+  color: white;
+  padding: 0.2rem;
+  background-color: var(--prussian-blue);
+  width: 100%;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+select:focus {
+  box-shadow: 0.2rem 0.2rem white;
+}
+
+.input-validated {
+  display: block;
+}
+
+.input-validated[data-error] .input {
+  border-color: red;
+  color: red;
+  background: white;
+  width: 100%;
+}
+
+.input-validated[data-error]::after {
+  content: attr(data-error);
+  font-size: medium;
+  color: red;
+}

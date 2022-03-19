@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./../src/css/style.css" />
+    <script type="module" src="./../js/index.js"></script>
+    <title>Inscription</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Page head/title-->
+      <div class="top-page">
+        <h1>Inscription</h1>
+      </div>
+      <div class="body-site">
+        <form onsubmit="submitForm(event)">
+          <div class="form-fields">
+            <!--Family name-->
+            <div class="field-data">
+              <label for="txt_familyName">Family name : </label>
+              <div
+                class="input-validated"
+                data-error="The family name is incorrect"
+              >
+                <input
+                  id="txt_familyName"
+                  type="text"
+                  placeholder="Family name"
+                  class="input"
+                />
+              </div>
+            </div>
+            <!--First name-->
+            <div class="field-data">
+              <label for="txt_firstName">First name : </label>
+              <div
+                class="input-validated"
+                data-error="The first name is incorrect"
+              >
+                <input
+                  id="txt_firstName"
+                  type="text"
+                  placeholder="First name"
+                  class="input"
+                />
+              </div>
+            </div>
+            <!--Age-->
+            <div class="field-data">
+              <label for="txt_age">Age : </label>
+              <div class="input-validated" data-error="The age is incorrect">
+                <input
+                  id="txt_age"
+                  type="number"
+                  placeholder="Age"
+                  class="input"
+                />
+              </div>
+            </div>
+            <!--Gender-->
+            <div class="field-data">
+              <label>Gender : </label>
+              <div class="gender-options">
+                <div class="male">
+                  <input id="radio_male" name="gender" type="radio" checked />
+                  <label for="radio_male">Male</label>
+                </div>
+                <div class="female">
+                  <input id="radio_female" name="gender" type="radio" />
+                  <label for="radio_female">Female</label>
+                </div>
+              </div>
+            </div>
+            <!--Login-->
+            <div class="field-data">
+              <label for="txt_login">Login : </label>
+              <div class="input-validated" data-error="The login is incorrect">
+                <input
+                  id="txt_login"
+                  type="text"
+                  placeholder="Login"
+                  class="input"
+                />
+              </div>
+            </div>
+            <!--Password-->
+            <div class="field-data">
+              <label for="txt_pwd">Password : </label>
+              <div
+                class="input-validated"
+                data-error="The password is incorrect"
+              >
+                <input
+                  id="txt_pwd"
+                  type="password"
+                  placeholder="Password"
+                  class="input"
+                />
+              </div>
+            </div>
+            <!--Confirm password-->
+            <div class="field-data">
+              <label for="txt_confirmPwd">Confirm password : </label>
+              <div
+                class="input-validated"
+                data-error="The confirmed password is incorrect"
+              >
+                <input
+                  id="txt_confirmPwd"
+                  type="password"
+                  placeholder="Confirm password"
+                  class="input"
+                />
+              </div>
+            </div>
+            <!--Country-->
+            <div class="field-data">
+              <label for="combo_countries">Country :</label>
+              <select id="combo_countries" name="countries">
+                <option value="morocco">Morocco</option>
+                <option value="ireland">Ireland</option>
+                <option value="poland">Poland</option>
+              </select>
+            </div>
+            <!--Email-->
+            <div class="field-data">
+              <label for="txt_email">Email :</label>
+              <div class="input-validated" data-error="The email is incorrect">
+                <input
+                  id="txt_email"
+                  type="email"
+                  placeholder="Email"
+                  class="input"
+                />
+              </div>
+            </div>
+            <!--I agree with-->
+            <div id="agree_with" class="field-data">
+              <input id="checkbox_email" type="checkbox" />
+              <label for="checkbox_email">I agree to receive emails</label>
+            </div>
+            <!--Subscribe-->
+            <button id="submit_btn" type="submit">Subscribe</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
