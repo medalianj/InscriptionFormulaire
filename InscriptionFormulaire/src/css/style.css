@@ -41,7 +41,8 @@ h1 {
   display: flex;
 }
 
-.form-fields > button {
+#submit_btn {
+  text-align: center;
   margin-left: 37%;
   background-color: var(--upsdell-red);
   border: 0.3rem solid var(--red-violet-color-wheel);
@@ -50,9 +51,10 @@ h1 {
   font-weight: bold;
   width: 10rem;
   height: 3rem;
+  padding: -1rem;
 }
 
-.form-fields > button:hover {
+#submit_btn:hover {
   color: white;
   cursor: pointer;
   transition: 1.5s;
@@ -66,12 +68,8 @@ h1 {
   padding-right: 1rem;
 }
 
-.field-data > input {
-  width: 20rem;
-}
-
 .field-data > select {
-  width: 28.8rem;
+  width: 29.5rem;
 }
 
 .male,
@@ -112,18 +110,10 @@ select:focus {
 }
 
 .input-validated {
-  display: block;
+  width: 30rem;
 }
 
-.input-validated[data-error] .input {
-  border-color: red;
-  color: red;
-  background: white;
-  width: 100%;
-}
-
-.input-validated[data-error]::after {
-  content: attr(data-error);
+.just-validate-error-label {
+  margin-top: 0.2rem;
   font-size: medium;
-  color: red;
 }

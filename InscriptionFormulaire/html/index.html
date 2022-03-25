@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./../src/css/style.css" />
-    <script type="module" src="./../js/index.js"></script>
     <title>Inscription</title>
   </head>
   <body>
@@ -15,7 +14,7 @@
         <h1>Inscription</h1>
       </div>
       <div class="body-site">
-        <form onsubmit="submitForm(event)">
+        <form id="form">
           <div class="form-fields">
             <!--Family name-->
             <div class="field-data">
@@ -142,10 +141,14 @@
               <label for="checkbox_email">I agree to receive emails</label>
             </div>
             <!--Subscribe-->
-            <button id="submit_btn" type="submit">Subscribe</button>
+            <button id="submit_btn" onclick="subscribe()">Submit</button>
           </div>
         </form>
       </div>
     </div>
+
+    <!--Script-->
+    <script type="text/javascript" src="./../js/index.js"></script>
+    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
   </body>
 </html>
