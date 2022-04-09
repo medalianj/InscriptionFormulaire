@@ -117,3 +117,7 @@ select:focus {
   margin-top: 0.2rem;
   font-size: medium;
 }
+
+.is-invalid {
+  border-color: rgb(184, 17, 17);
+}

@@ -23,7 +23,10 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
   //Validation
-  validation = new window.JustValidate("#form");
+  validation = new window.JustValidate("#form", {
+    errorFieldCssClass: "is-invalid",
+  });
+
   if (!!validation) {
     validation
       //Family name
@@ -66,13 +69,13 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         {
           rule: "maxLength",
-          value: 3,
+          value: 2,
         },
         {
           validator: (value) => {
-            return Number(value) <= 130;
+            return Number(value) <= 90 && Number(value) >= 10;
           },
-          errorMessage: "The age should be less than 131!",
+          errorMessage: "The age should be between 10 and 90 years!",
         },
       ])
 
@@ -81,6 +84,10 @@ document.addEventListener("DOMContentLoaded", () => {
         {
           rule: "required",
           errorMessage: "The login is required!",
+        },
+        {
+          rule: "minLength",
+          value: 4,
         },
       ])
 
@@ -92,7 +99,8 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         {
           rule: "password",
-          errorMessage: "The password is not valid!",
+          errorMessage:
+            "The password is weak! Please Use a combination of characters and numbers!",
         },
       ])
 
